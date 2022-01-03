@@ -19,10 +19,10 @@ public class BDCheckCommand implements BCommand {
 		BDao bao = new BDao();
 		int pw = bao.pwCheck(cid);
 		
-		if(pw==num) {
+		if(pw==num) { //맞으면 삭제 실행
 			request.setAttribute("viewD", "delete.do");
-		}else {
-			request.setAttribute("viewD", "list.do");
+		}else { //틀리면 다시 목록으로
+			request.setAttribute("viewD", "pList.do");
 		}
 
 	}

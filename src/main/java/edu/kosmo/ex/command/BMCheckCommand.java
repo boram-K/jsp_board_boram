@@ -25,7 +25,7 @@ public class BMCheckCommand implements BCommand {
 			request.setAttribute("viewM", "modify_view.do");
 			
 		}else {
-			request.setAttribute("viewM", "list.do");
+			request.setAttribute("viewM", "pList.do");
 		}
 		
 	}
