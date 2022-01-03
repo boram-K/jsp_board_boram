@@ -1,0 +1,24 @@
+package edu.kosmo.ex.command;
+
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
+
+import edu.kosmo.ex.dao.BDao;
+
+public class BWriteCommand implements BCommand {
+
+	@Override
+	public void execute(HttpServletRequest request, HttpServletResponse response) {
+		String bname = request.getParameter("bname");
+		String btitle = request.getParameter("btitle");
+		String bcontent = request.getParameter("bcontent");
+		String bpw = request.getParameter("bpw");
+		
+		int pw = Integer.parseInt(bpw);
+		
+		BDao bao = new BDao();
+		bao.write(bname, btitle, bcontent, pw);
+		
+	}
+
+}
