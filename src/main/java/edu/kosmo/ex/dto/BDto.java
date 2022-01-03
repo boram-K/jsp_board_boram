@@ -13,6 +13,7 @@ BGROUP            NUMBER(4)
 BSTEP             NUMBER(4)     
 BINDENT           NUMBER(4) */
 
+//DB에 있는 데이터를 담기 위해 필요함
 public class BDto {
 	private int bid;
 	private String bname;

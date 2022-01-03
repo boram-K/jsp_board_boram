@@ -9,6 +9,7 @@ import edu.kosmo.ex.dao.BDao;
 import edu.kosmo.ex.dto.BDto;
 
 
+//찾는 단어가 들어간 제목의 게시글을 검색하기
 public class BSerchCommand implements BCommand {
 
 	// 한 화면에 보여줄 리스트 갯수, 페이징 범위의 갯수

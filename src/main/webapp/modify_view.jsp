@@ -11,18 +11,18 @@
 <link rel ="stylesheet" href="CSS/custom.css">
 <title>Insert title here</title>
 <style type="text/css">
-.wrap{
-	height: 85vh;
-}
+	.wrap{
+		height: 85vh;
+	}
 </style>
 <script type="text/javascript">
-function check(){
-	 if(document.getElementById("title").value==""){
-		alert("제목을 입력해주세요");
-		return;
+	function check(){
+		 if(document.getElementById("title").value==""){
+			alert("제목을 입력해주세요");
+			return;
+		}
+		 modifyForm.submit();
 	}
-	 modifyForm.submit();
-}
 </script>
 </head>
 <body>

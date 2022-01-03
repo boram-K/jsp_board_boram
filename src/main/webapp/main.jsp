@@ -12,9 +12,9 @@
 <link rel ="stylesheet" href="CSS/custom.css">
 <title>Board Main</title>
 <style type="text/css">
-.wrap{
+	.wrap{
 	height: 80vh;
-}
+	}
 </style>
 </head>
 <body>

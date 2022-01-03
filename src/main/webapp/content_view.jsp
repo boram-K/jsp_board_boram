@@ -11,17 +11,17 @@
 <link rel ="stylesheet" href="CSS/custom.css">
 <title>게시글 확인</title>
 <style type="text/css">
-.content{
+	.content{
 	height: 100px;
-}
-.td{
- width: 100px;
- background-color: #101820;
- color: #D7C49E;
-}
-.wrap{
-	height: 70vh;
-}
+	}
+	.td{
+ 	width: 100px;
+ 	background-color: #101820;
+ 	color: #D7C49E;
+	}
+	.wrap{
+		height: 70vh;
+	}
 </style>
 </head>
 <body>

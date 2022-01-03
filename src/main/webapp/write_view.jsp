@@ -11,41 +11,41 @@
 <link rel ="stylesheet" href="CSS/custom.css">
 <title>글쓰기</title>
 <script type="text/javascript">
-function inNumber(){
-	if(event.keyCode<48||event.keyCode>57){
-		event.returnValue = false;
+	function inNumber(){
+		if(event.keyCode<48||event.keyCode>57){
+			event.returnValue = false;
+		}
 	}
-}
 
-function check(){
+	function check(){
 	
-	if(document.getElementById("pw").value==""){
-		alert("비밀번호를 입력해주세요");
-		return;
-	}else if(document.getElementById("title").value==""){
-		alert("제목을 입력해주세요");
-		return;
+		if(document.getElementById("pw").value==""){
+			alert("비밀번호를 입력해주세요");
+			return;
+		}else if(document.getElementById("title").value==""){
+			alert("제목을 입력해주세요");
+			return;
+		}
+		writeForm.submit();
 	}
-	writeForm.submit();
-}
 </script>
 <style type="text/css">
-table{
-	margin: 0 auto;
-}
-.wrap{
-	height: 85vh;
-}
+	table{
+		margin: 0 auto;
+	}
+	.wrap{
+		height: 85vh;
+	}
 
 </style>
 </head>
 <body>
 
-<jsp:include page="header.jsp"/>
-<div class="wrap">
-<div class="container mt-5">
-	<table class="table table-bordered " style="width: 80%">
-		<form name="writeForm" action="write.do" method="post">
+	<jsp:include page="header.jsp"/>
+	<div class="wrap">
+		<div class="container mt-5">
+		<table class="table table-bordered " style="width: 80%">
+			<form name="writeForm" action="write.do" method="post">
 			<tr>
 				<td>이름</td>
 				<td> <input type="text" name="bname" size = "20"> </td>

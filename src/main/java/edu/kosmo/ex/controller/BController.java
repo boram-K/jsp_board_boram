@@ -27,7 +27,7 @@ import edu.kosmo.ex.command.BWriteCommand;
 /**
  * Servlet implementation class BController
  */
-@WebServlet("*.do")
+@WebServlet("*.do") //.do로 치고 오는 모든 것을 이곳에서 받아 처리하겠다.
 public class BController extends HttpServlet {
 	private static final long serialVersionUID = 1L;
 
@@ -46,7 +46,7 @@ public class BController extends HttpServlet {
 	protected void doGet(HttpServletRequest request, HttpServletResponse response)
 			throws ServletException, IOException {
 		System.out.println("doget"); // 디버깅용 문구
-		doAction(request, response);
+		doAction(request, response); //처리는 doAction에서
 	}
 
 	/**
@@ -56,16 +56,16 @@ public class BController extends HttpServlet {
 	protected void doPost(HttpServletRequest request, HttpServletResponse response)
 			throws ServletException, IOException {
 		System.out.println("post"); // 디버깅용 문구
-		doAction(request, response);
+		doAction(request, response);//처리는 doAction에서
 	}
 
 	private void doAction(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		System.out.println("action....");
+		System.out.println("action...."); //디버깅용
 	
 		request.setCharacterEncoding("UTF-8");
 	
-		String viewPage = null;
-		BCommand command = null;
+		String viewPage = null; //어느 페이지에서 보여줄 지 결정
+		BCommand command = null; //인터페이스
 		
 		String uri = request.getRequestURI();
 		String conpath = request.getContextPath();
@@ -95,7 +95,7 @@ public class BController extends HttpServlet {
 			command = new BSaveCommand();
 			command.execute(request, response);
 			viewPage="mpwCheckForm.jsp";
-		}else if(com.equals("/mpwCheck.do")) {
+		}else if(com.equals("/mpwCheck.do")) { //수정할 때 비밀번호 확인
 			command = new BMCheckCommand();
 			command.execute(request,response);
 			String view = (String)request.getAttribute("viewM");
@@ -121,7 +121,7 @@ public class BController extends HttpServlet {
 			command = new BReplyCommand();
 			command.execute(request, response);
 			viewPage = "pList.do";	
-		}else if(com.equals("/serch.do")){ //답변 올리기 버튼 눌렀을 적에
+		}else if(com.equals("/serch.do")){ //게시글 검색할 때
 			command = new BSerchCommand();
 			command.execute(request, response);
 			viewPage = "serchList.jsp";	

@@ -5,6 +5,8 @@ import javax.servlet.http.HttpServletResponse;
 
 import edu.kosmo.ex.dao.BDao;
 
+
+//글 작성하기
 public class BWriteCommand implements BCommand {
 
 	@Override

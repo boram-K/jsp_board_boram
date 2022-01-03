@@ -12,31 +12,31 @@
 <link rel ="stylesheet" href="CSS/custom.css">
 <title>비밀번호 확인</title>
 <style type="text/css">
-.wrap{
-	height: 80vh;
-}
+	.wrap{
+		height: 80vh;
+	}
 </style>
 </head>
 <body>
-<div class="wrap">
-<jsp:include page="header.jsp"/>
-<div class="container mt-5 text-center">
-<div class="d-flex justify-content-center">
-<table class="table table-bordered" style="width: 500px">
-<form action="mpwCheck.do" method="post">
-<input type="hidden" name="mid" value="${cid}">
-<tr>
-<td>password </td>
-<td><input type="text" name="num" size="10"></td>
-</tr>
-<tr>
-<td colspan="2"><input type="submit" value="입력"></td>
-</tr>
-</form>
-</table>
-</div>
-</div>
-</div>
-<jsp:include page="footer.jsp"/>
+	<div class="wrap">
+	<jsp:include page="header.jsp"/>
+		<div class="container mt-5 text-center">
+			<div class="d-flex justify-content-center">
+			<table class="table table-bordered" style="width: 500px">
+				<form action="mpwCheck.do" method="post">
+				<input type="hidden" name="mid" value="${cid}">
+				<tr>
+					<td>password </td>
+					<td><input type="text" name="num" size="10"></td>
+				</tr>
+				<tr>
+					<td colspan="2"><input type="submit" value="입력"></td>
+				</tr>
+				</form>
+			</table>
+			</div>
+		</div>
+	</div>
+	<jsp:include page="footer.jsp"/>
 </body>
 </html>

@@ -5,6 +5,7 @@ import javax.servlet.http.HttpServletResponse;
 
 import edu.kosmo.ex.dao.BDao;
 
+//삭제 시 비밀번호 체크
 public class BDCheckCommand implements BCommand {
 
 	@Override

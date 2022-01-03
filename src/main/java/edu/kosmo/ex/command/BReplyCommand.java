@@ -5,6 +5,7 @@ import javax.servlet.http.HttpServletResponse;
 
 import edu.kosmo.ex.dao.BDao;
 
+//답글달기
 public class BReplyCommand implements BCommand {
 
 	@Override

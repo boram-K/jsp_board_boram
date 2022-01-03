@@ -26,7 +26,7 @@ public class BDao {
 			e.printStackTrace();
 		}
 	}
-
+	//글 작성
 	public void write(String bname, String btitle, String bcontent, int bpw) {
 		System.out.println("write..");
 
@@ -61,7 +61,8 @@ public class BDao {
 		}
 
 	}
-
+	
+	//글 확인하기
 	public BDto contentview(int cid) {
 		upHit(cid);
 
@@ -113,7 +114,8 @@ public class BDao {
 
 		return dto;
 	}
-
+	
+	//글 수정하기
 	public void modify(int cid, String bname, String btitle, String bcontent) {
 		System.out.println("modify....");
 
@@ -146,7 +148,8 @@ public class BDao {
 		}
 
 	}
-
+	
+	//비밀번호 확인을 위해 해당 게시글의 비밀번호를 뽑아내는 함수
 	public int pwCheck(int cid) {
 		System.out.println("pwcheck..");
 		int pass = 0;
@@ -185,6 +188,7 @@ public class BDao {
 
 	}
 
+	//글 삭제 
 	public void delete(int cid) {
 		System.out.println("delete..");
 
@@ -216,7 +220,7 @@ public class BDao {
 		}
 
 	}
-
+	//답글이 원본글 아래에 달릴 수 있도록 모양을 잡아주는 것
 	private void replyShape(int group, int step) {
 		System.out.println("replyshape....");
 
@@ -247,7 +251,7 @@ public class BDao {
 		}
 
 	}
-
+	//답변달기
 	public void reply(String bname, String btitle, String bcontent, int bpw, int bgroup, int bstep, int bindent) {
 
 		System.out.println("reply.....");
@@ -289,7 +293,7 @@ public class BDao {
 		}
 
 	}
-
+	//답변 글 보기.. 하지만 컨텐트 뷰로 대체해도 상관없을 듯...?
 	public BDto reply_view(int cid) {
 		upHit(cid);
 
@@ -341,6 +345,7 @@ public class BDao {
 		return dto;
 	}
 
+	//조회수 올리는 함수 글을 볼 때마다 bhit가 +1이 된다
 	public void upHit(int cid) {
 		System.out.println("uphit...");
 
@@ -432,7 +437,8 @@ public class BDao {
 		return btos;
 
 	}
-
+	
+	//페이징 배열에 첫페이지와 마지막 페이지를 담았다
 	public int[] paging(int pageNum) {
 		Connection con = null;
 		PreparedStatement pstm = null;
@@ -488,7 +494,7 @@ public class BDao {
 
 		return startEnd;
 	}
-
+	//게시글 검색용. 
 	public ArrayList<BDto> serchList(int pageNum,String title) {
 
 		System.out.println("serchList...");
@@ -549,7 +555,7 @@ public class BDao {
 		return btos;
 
 	}
-	
+	//검색용 페이징 
 	public int[] serchpaging(int pageNum,String serch) {
 		Connection con = null;
 		PreparedStatement pstm = null;

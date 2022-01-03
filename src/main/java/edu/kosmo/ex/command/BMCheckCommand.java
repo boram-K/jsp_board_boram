@@ -5,6 +5,8 @@ import javax.servlet.http.HttpServletResponse;
 
 import edu.kosmo.ex.dao.BDao;
 
+
+//글 수정시 비밀번호 체크
 public class BMCheckCommand implements BCommand {
 
 	@Override

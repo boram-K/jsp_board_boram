@@ -5,7 +5,7 @@ import javax.servlet.http.HttpServletResponse;
 
 import edu.kosmo.ex.dao.BDao;
 import edu.kosmo.ex.dto.BDto;
-
+//작성글 보기
 public class BContentCommand implements BCommand {
 
 	@Override

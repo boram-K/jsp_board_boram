@@ -12,14 +12,14 @@
 
 <title>Insert title here</title>
 <style type="text/css">
-span{
-	font-family: 'Sunflower';
-	font-size: 15px;
-	color: #D7C49E;
-}
-footer{
-	margin-top: 100px;
-}
+	span{
+		font-family: 'Sunflower';
+		font-size: 15px;
+		color: #D7C49E;
+	}
+	footer{
+		margin-top: 100px;
+	}
 </style>
 </head>
 <body>

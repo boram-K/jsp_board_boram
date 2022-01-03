@@ -5,6 +5,7 @@ import javax.servlet.http.HttpServletResponse;
 
 import edu.kosmo.ex.dao.BDao;
 
+//글 삭제
 public class BDeleteCommand implements BCommand {
 
 	@Override

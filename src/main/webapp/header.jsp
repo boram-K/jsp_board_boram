@@ -11,10 +11,10 @@
 <link rel ="stylesheet" href="CSS/custom.css">
 <title>Insert title here</title>
 <style type="text/css">
-nav{
-background-color: #343148;
-font-weight: bolder;
-}
+	nav{
+	background-color: #343148;
+	font-weight: bolder;
+	}
 
 </style>
 </head>
